@@ -1,0 +1,36 @@
+usage: usmag.py [-h] [-s] [-d DOMAIN] [--no-header] [-V] [-v {0,1,2}]
+                input output
+
+USMAG - USername and MAil Generator
+
+Version: 0.0.1-alpha
+
+Import csv file in format:
+Jméno a příjmení,e-mail
+Name_and_Surname,private_e-mail
+
+And convert to format:
+//origirnal header//
+Name_and_Surname,private_e-mail,Name,Surname,domain_email,username,password
+
+(c) Wochozka, (c) AnyKaf
+
+positional arguments:
+  input                 input csv file
+  output                output csv file
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -s                    semicolon separated instead of comma
+  -d DOMAIN, --domain DOMAIN
+                        domain name
+  --no-header           disable first line as columns header
+  -V, --version         return version and exit
+  -v {0,1,2}, --verbose {0,1,2}
+                        increase output verbosity (default: 0 - quiet)
+
+Example:
+
+	$ python3 usmag.py -d domain.suf input_file.csv output_file.csv 
+
+Copyright (c) 2023, David Svarc, david@svarc.it, Anežka Kafková, anezka@zzaba.cz
